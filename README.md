@@ -2,6 +2,8 @@
 
 This is a theme for the popular self-hosted RSS reader [Tiny Tiny RSS](https://tt-rss.org) that provides a Feedly-inspired interface. Enjoy a clean, minimalist design that makes it easy to quickly scan and read your feeds.
 
+The original author has not updated their repo in 3 years, so I forked this version and implemented fixes to bring compatibility with the latest version of tt-rss.
+
 For the best experience, please use a current browser.
 
 ## Quick Start
