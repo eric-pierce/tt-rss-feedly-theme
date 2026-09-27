@@ -82,6 +82,12 @@
       color: @fg-text-muted;
       font-style: normal;
     }
+    // restore tt-rss narrow styles disabled via @breakpoint-md in _variables.less
+    .media(0, md, {
+      :is(.icon-syndicate, #selected_prompt) {
+        display: none;
+      }
+    });
 
     // -------------------------------------------------------------------------
     // buttons excluding show/hide feeds

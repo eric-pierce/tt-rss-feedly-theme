@@ -116,6 +116,13 @@ html {
 };
 
 @breakpoint-xs: 480px;
+@breakpoint-md-theme: 768px; // value of @breakpoint-md in tt-rss
+
+// Since 2025, tt-rss ships its own narrow/phone layout (feed drawer, bigger list text, wrapped headline rows),
+// all of it inside `@media (max-width: @breakpoint-md)`. The theme brings its own responsive layout, so make
+// those core media queries never match. The core JS only enables its phone gestures (swipe to mark read,
+// pull to refresh) while the drawer toggle `.sidebar-toggle` is visible, so they stay off as well.
+@breakpoint-md: 0px;
 
 @is-night: boolean(luma(@default-fg) > 50%);
 
@@ -179,7 +186,7 @@ html {
     @0: 0;
     @xs: @breakpoint-xs; // custom addition
     @sm: @breakpoint-sm; // *2
-    @md: @breakpoint-md; // *2
+    @md: @breakpoint-md-theme; // *2
     @lg: @breakpoint-lg; // *2
     @xl: @breakpoint-xl; // *2
   };

@@ -260,6 +260,10 @@ body.ttrss_prefs {
     padding: 0;
   }
   #feedTree {
+    // tt-rss uses a flex row since 899d7d25, keep expando and checkbox centered like before
+    .dijitTreeRow {
+      align-items: center;
+    }
     // allow truncating feed label
     .dijitTreeContent {
       display: inline;
